@@ -301,12 +301,12 @@ $EndComp
 $Comp
 L R R25
 U 1 1 558129ED
-P 15250 9800
-F 0 "R25" V 15330 9800 40  0000 C CNN
-F 1 "20k" V 15257 9801 40  0000 C CNN
-F 2 "~" V 15180 9800 30  0000 C CNN
-F 3 "~" H 15250 9800 30  0000 C CNN
-	1    15250 9800
+P 16300 9800
+F 0 "R25" V 16380 9800 40  0000 C CNN
+F 1 "20k" V 16307 9801 40  0000 C CNN
+F 2 "~" V 16230 9800 30  0000 C CNN
+F 3 "~" H 16300 9800 30  0000 C CNN
+	1    16300 9800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -867,7 +867,7 @@ Trace #39
 Text Notes 17700 8050 0    60   ~ 0
 Trace #38
 Text Notes 17700 7950 0    60   ~ 0
-Trace #36 ****
+Trace #36
 Text Notes 13950 7500 0    60   ~ 0
 Trace #46\n
 Text Notes 13950 7350 0    60   ~ 0
@@ -930,7 +930,7 @@ F 3 "" H 6350 850 60  0000 C CNN
 $EndComp
 Text Notes 5250 6600 0    60   ~ 0
 Pin 14
-Text Notes 3300 1150 0    60   ~ 0
+Text Notes 3400 6550 0    60   ~ 0
 Trace #1
 Text Notes 5950 4300 0    60   ~ 0
 Pin 7
@@ -993,8 +993,48 @@ F 3 "" H 17350 600 60  0000 C CNN
 	1    17350 600 
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5050 1050 0    60   Input ~ 0
+Text GLabel 3150 6550 0    60   Input ~ 0
 STV
+$Comp
+L POT VR1
+U 1 1 558296D7
+P 19450 5000
+F 0 "VR1" H 19450 4900 50  0000 C CNN
+F 1 "POT" H 19450 5000 50  0000 C CNN
+F 2 "~" H 19450 5000 60  0000 C CNN
+F 3 "~" H 19450 5000 60  0000 C CNN
+	1    19450 5000
+	1    0    0    -1  
+$EndComp
+Text Notes 18950 5250 0    60   ~ 0
+Hooked up correctly?
+Text GLabel 2900 11250 0    60   Input ~ 0
+STV
+$Comp
+L GND #PWR?
+U 1 1 55829C36
+P 6000 10000
+F 0 "#PWR?" H 6000 10000 30  0001 C CNN
+F 1 "GND" H 6000 9930 30  0001 C CNN
+F 2 "" H 6000 10000 60  0000 C CNN
+F 3 "" H 6000 10000 60  0000 C CNN
+	1    6000 10000
+	1    0    0    1   
+$EndComp
+Text GLabel 21550 9150 2    60   Input ~ 0
+STV
+Text Notes 2900 11250 0    60   ~ 0
+Trace #1
+Text Notes 21100 9150 0    60   ~ 0
+Trace #1
+Text GLabel 9600 4300 0    60   Input ~ 0
+STV
+Text Notes 10050 4300 0    60   ~ 0
+Trace #1
+Text GLabel 14500 3500 0    60   Input ~ 0
+STV
+Text Notes 14550 3500 0    60   ~ 0
+Trace #1
 Connection ~ 12600 6700
 Wire Wire Line
 	12300 6700 12600 6700
@@ -1462,7 +1502,7 @@ Wire Wire Line
 Wire Wire Line
 	13400 9800 14900 9800
 Wire Wire Line
-	14900 9800 15000 9800
+	14900 9800 16050 9800
 Wire Wire Line
 	15800 12750 15500 12750
 Wire Wire Line
@@ -1636,98 +1676,20 @@ Wire Notes Line
 Wire Notes Line
 	11550 7450 11550 7250
 Wire Wire Line
-	1950 1150 5150 1150
+	17550 9150 17950 9150
 Wire Wire Line
-	5150 1150 10900 1150
+	17950 9150 21550 9150
 Wire Wire Line
-	10900 1150 13200 1150
-Wire Wire Line
-	13200 1150 15150 1150
-Wire Wire Line
-	1950 1150 1950 6600
-Wire Wire Line
-	1950 6600 1950 10200
-Wire Wire Line
-	1950 10200 1950 11250
-Wire Wire Line
-	1950 11250 1950 14800
-Wire Wire Line
-	1950 14800 21050 14800
-Wire Wire Line
-	21050 14800 21050 9150
-Wire Wire Line
-	21050 9150 17950 9150
-Wire Wire Line
-	17950 9150 17550 9150
-Wire Wire Line
-	4200 11250 1950 11250
-Connection ~ 1950 11250
-Wire Wire Line
-	1950 6600 5150 6600
-Connection ~ 1950 6600
-Wire Wire Line
-	15150 1150 15150 3350
-Wire Wire Line
-	15150 3350 15150 3700
-Wire Wire Line
-	15150 3350 15400 3350
-Connection ~ 5150 1150
-Wire Wire Line
-	11000 4050 10900 4050
-Wire Wire Line
-	10900 4050 10900 1150
-Connection ~ 10900 1150
-Wire Wire Line
-	13100 3850 13200 3850
-Wire Wire Line
-	13200 4600 13200 4350
-Wire Wire Line
-	13200 4350 13200 3850
-Wire Wire Line
-	13200 3850 13200 1150
-Connection ~ 13200 1150
-Wire Wire Line
-	11950 4600 12400 4600
-Wire Wire Line
-	12400 4600 13200 4600
-Wire Wire Line
-	13200 4600 13550 4600
-Wire Wire Line
-	13550 4600 14850 4600
-Wire Wire Line
-	14850 4600 15200 4600
-Connection ~ 13200 3850
-Wire Wire Line
-	13800 4350 13200 4350
-Connection ~ 13200 4350
-Wire Wire Line
-	12300 5100 12400 5100
-Wire Wire Line
-	12400 5100 12400 4600
-Connection ~ 12400 4600
-Wire Wire Line
-	14850 4600 14850 4850
-Wire Wire Line
-	14850 4850 14750 4850
-Connection ~ 13200 4600
-Wire Wire Line
-	15200 4600 15200 5150
-Wire Wire Line
-	15200 5150 15600 5150
-Connection ~ 14850 4600
+	10700 4050 11000 4050
 Wire Wire Line
 	13650 7850 13550 7850
 Wire Wire Line
-	13550 7850 13550 4600
-Connection ~ 13550 4600
-Wire Wire Line
-	15500 9800 17950 9800
+	16550 9800 17950 9800
 Wire Wire Line
 	17950 9800 17950 9150
 Connection ~ 17950 9150
 Wire Wire Line
-	15150 3700 15400 3700
-Connection ~ 15150 3350
+	15000 3700 15400 3700
 Wire Wire Line
 	6350 900  6350 950 
 Wire Wire Line
@@ -1843,20 +1805,15 @@ Wire Wire Line
 	1850 10850 4200 10850
 Connection ~ 6350 950 
 Wire Wire Line
-	5900 10550 6000 10550
+	6000 10550 5900 10550
 Wire Wire Line
-	6000 10550 6000 10200
-Wire Wire Line
-	6000 10200 1950 10200
-Connection ~ 1950 10200
+	6000 10000 6000 10550
 Wire Wire Line
 	20450 9050 17550 9050
 Connection ~ 20450 8750
 Connection ~ 20450 5000
 Wire Notes Line
 	1300 10900 1300 11300
-Wire Notes Line
-	2400 11200 2950 11200
 Wire Notes Line
 	1850 11300 1850 10900
 Wire Notes Line
@@ -1870,26 +1827,11 @@ Wire Notes Line
 Wire Notes Line
 	13900 1250 13400 1250
 Wire Wire Line
-	5050 1050 5150 1050
-Wire Wire Line
-	5150 1050 5150 1150
-Wire Wire Line
 	19700 5000 20450 5000
 Wire Wire Line
 	18500 5000 19200 5000
 Wire Wire Line
 	19450 4150 19450 4850
-$Comp
-L POT VR1
-U 1 1 558296D7
-P 19450 5000
-F 0 "VR1" H 19450 4900 50  0000 C CNN
-F 1 "POT" H 19450 5000 50  0000 C CNN
-F 2 "~" H 19450 5000 60  0000 C CNN
-F 3 "~" H 19450 5000 60  0000 C CNN
-	1    19450 5000
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	19100 4750 19100 5150
 Wire Notes Line
@@ -1898,8 +1840,70 @@ Wire Notes Line
 	19750 5150 19750 4750
 Wire Notes Line
 	19750 4750 19100 4750
-Text Notes 18950 5250 0    60   ~ 0
-Hooked up correctly?
 Wire Notes Line
 	1300 11300 1850 11300
+Wire Wire Line
+	3150 6550 5150 6550
+Wire Wire Line
+	2900 11250 4200 11250
+Wire Wire Line
+	10700 4050 10700 4300
+Wire Wire Line
+	10700 4300 9600 4300
+Wire Wire Line
+	14500 3500 15000 3500
+Wire Wire Line
+	15000 3350 15000 3500
+Wire Wire Line
+	15000 3500 15000 3700
+Connection ~ 15000 3500
+Wire Wire Line
+	15000 3350 15400 3350
+Text GLabel 14100 6450 2    60   Input ~ 0
+STV
+Text Notes 13650 6450 0    60   ~ 0
+Trace #1
+Wire Wire Line
+	14100 6450 13550 6450
+Wire Wire Line
+	13550 6450 13550 7850
+Wire Wire Line
+	13100 3850 14300 3850
+Text Notes 13850 3850 0    60   ~ 0
+Trace #1
+Text GLabel 14300 3850 2    60   Input ~ 0
+STV
+Text Notes 14050 5300 0    60   ~ 0
+Trace #1
+Text GLabel 14500 5300 2    60   Input ~ 0
+STV
+Wire Wire Line
+	14500 5300 13100 5300
+Wire Wire Line
+	13100 5300 13100 5100
+Wire Wire Line
+	13100 5100 13100 4600
+Wire Wire Line
+	13100 4600 13100 4350
+Wire Wire Line
+	13100 4350 13800 4350
+Wire Wire Line
+	11950 4600 13100 4600
+Connection ~ 13100 4600
+Wire Wire Line
+	12300 5100 13100 5100
+Wire Wire Line
+	13100 5100 14900 5100
+Wire Wire Line
+	14900 5100 15450 5100
+Connection ~ 13100 5100
+Wire Wire Line
+	14900 5100 14900 4850
+Wire Wire Line
+	14900 4850 14750 4850
+Wire Wire Line
+	15450 5100 15450 5150
+Wire Wire Line
+	15450 5150 15600 5150
+Connection ~ 14900 5100
 $EndSCHEMATC

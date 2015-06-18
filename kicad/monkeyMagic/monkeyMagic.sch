@@ -37,7 +37,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 1 1
 Title "Monkey Magic Sound Board"
-Date "17 jun 2015"
+Date "18 jun 2015"
 Rev ""
 Comp "Nintendo"
 Comment1 "Hand-traced"
@@ -884,10 +884,8 @@ Text Notes 3250 11050 0    60   ~ 0
 Trace #22
 Text Notes 3250 11150 0    60   ~ 0
 Trace #23
-Text Notes 2450 10950 0    60   ~ 0
-Resistor\nArray\nOf Some\nSort
-Text Notes 13250 1700 0    60   ~ 0
-Resistor Array
+Text Notes 13450 1350 0    60   ~ 0
+Resistor \nArray 102\n(1k)
 Text Notes 13300 3950 0    60   ~ 0
 Trace #25
 Text Notes 9700 7350 0    60   ~ 0
@@ -913,25 +911,12 @@ Text Notes 9750 3850 0    60   ~ 0
 Trace #27
 Text Notes 8350 5100 0    60   ~ 0
 Trace #28
-Text Notes 19350 4850 0    60   ~ 0
-VR1?
 Text Notes 17350 3550 0    60   ~ 0
 Trace #34
 Text Notes 17350 4150 0    60   ~ 0
 Trace #35
 Text Notes 11150 7200 0    60   ~ 0
 Disconnected on our MMagic
-$Comp
-L VCC #PWR01
-U 1 1 5581E4CD
-P 5150 1150
-F 0 "#PWR01" H 5150 1250 30  0001 C CNN
-F 1 "VCC" H 5150 1250 30  0000 C CNN
-F 2 "" H 5150 1150 60  0000 C CNN
-F 3 "" H 5150 1150 60  0000 C CNN
-	1    5150 1150
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR02
 U 1 1 5581E4DC
@@ -947,6 +932,69 @@ Text Notes 5250 6600 0    60   ~ 0
 Pin 14
 Text Notes 3300 1150 0    60   ~ 0
 Trace #1
+Text Notes 5950 4300 0    60   ~ 0
+Pin 7
+Text Notes 6600 950  0    60   ~ 0
+Trace #2
+Text Notes 1350 11050 0    60   ~ 0
+Resistor\nArray 102\n(1k)
+$Comp
+L CONN_01X01 I_3
+U 1 1 55828715
+P 550 10950
+F 0 "I_3" H 550 11050 50  0000 C CNN
+F 1 "0" V 650 10950 50  0000 C CNN
+F 2 "" H 550 10950 60  0000 C CNN
+F 3 "" H 550 10950 60  0000 C CNN
+	1    550  10950
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 I_4
+U 1 1 55828A59
+P 800 11050
+F 0 "I_4" H 800 11150 50  0000 C CNN
+F 1 "0" V 900 11050 50  0000 C CNN
+F 2 "" H 800 11050 60  0000 C CNN
+F 3 "" H 800 11050 60  0000 C CNN
+	1    800  11050
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 I_5
+U 1 1 55828A5F
+P 1050 11150
+F 0 "I_5" H 1050 11250 50  0000 C CNN
+F 1 "0" V 1150 11150 50  0000 C CNN
+F 2 "" H 1050 11150 60  0000 C CNN
+F 3 "" H 1050 11150 60  0000 C CNN
+	1    1050 11150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 I_2
+U 1 1 55828DAC
+P 13550 600
+F 0 "I_2" H 13550 700 50  0000 C CNN
+F 1 "0" V 13650 600 50  0000 C CNN
+F 2 "" H 13550 600 60  0000 C CNN
+F 3 "" H 13550 600 60  0000 C CNN
+	1    13550 600 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X01 I_POT
+U 1 1 55828FAC
+P 17350 600
+F 0 "I_POT" H 17350 700 50  0000 C CNN
+F 1 "0" V 17450 600 50  0000 C CNN
+F 2 "" H 17350 600 60  0000 C CNN
+F 3 "" H 17350 600 60  0000 C CNN
+	1    17350 600 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5050 1050 0    60   Input ~ 0
+STV
 Connection ~ 12600 6700
 Wire Wire Line
 	12300 6700 12600 6700
@@ -990,23 +1038,15 @@ Wire Wire Line
 Wire Wire Line
 	11500 7350 8150 7350
 Wire Wire Line
-	13550 1550 13550 1300
+	13550 800  13550 3950
 Wire Wire Line
-	13550 3950 13550 1800
+	13550 3950 13100 3950
 Wire Wire Line
-	13100 3950 13550 3950
+	1250 11150 4200 11150
 Wire Wire Line
-	2350 11150 2150 11150
+	1000 11050 4200 11050
 Wire Wire Line
-	2350 11050 2150 11050
-Wire Wire Line
-	2350 10950 2150 10950
-Wire Wire Line
-	4200 11150 2950 11150
-Wire Wire Line
-	4200 11050 2950 11050
-Wire Wire Line
-	4200 10950 2950 10950
+	750  10950 4200 10950
 Connection ~ 12500 7600
 Wire Wire Line
 	12500 7350 12300 7350
@@ -1577,11 +1617,9 @@ Connection ~ 6550 5100
 Wire Wire Line
 	17350 3900 17200 3900
 Wire Wire Line
-	17350 1300 17350 3900
+	17350 800  17350 3900
 Wire Wire Line
-	18500 7950 18500 5100
-Wire Wire Line
-	18500 5100 19550 5100
+	18500 5000 18500 7950
 Connection ~ 18500 7950
 Wire Wire Line
 	16800 3900 16500 3900
@@ -1589,10 +1627,6 @@ Wire Wire Line
 	16500 3900 16500 4150
 Wire Wire Line
 	16500 4150 19450 4150
-Wire Wire Line
-	19450 4150 19450 4650
-Wire Wire Line
-	19550 5100 19550 4950
 Wire Notes Line
 	11550 7250 12250 7250
 Wire Notes Line
@@ -1803,8 +1837,6 @@ Wire Wire Line
 Wire Wire Line
 	7200 4300 6250 4300
 Connection ~ 7200 950 
-Text Notes 5950 4300 0    60   ~ 0
-Pin 7
 Wire Wire Line
 	1850 950  1850 10850
 Wire Wire Line
@@ -1817,14 +1849,57 @@ Wire Wire Line
 Wire Wire Line
 	6000 10200 1950 10200
 Connection ~ 1950 10200
-Text Notes 6600 950  0    60   ~ 0
-Trace #2
 Wire Wire Line
 	20450 9050 17550 9050
 Connection ~ 20450 8750
-Wire Wire Line
-	19350 4950 19350 5000
-Wire Wire Line
-	19350 5000 20450 5000
 Connection ~ 20450 5000
+Wire Notes Line
+	1300 10900 1300 11300
+Wire Notes Line
+	2400 11200 2950 11200
+Wire Notes Line
+	1850 11300 1850 10900
+Wire Notes Line
+	1850 10900 1300 10900
+Wire Notes Line
+	13400 1250 13400 1550
+Wire Notes Line
+	13400 1550 13900 1550
+Wire Notes Line
+	13900 1550 13900 1250
+Wire Notes Line
+	13900 1250 13400 1250
+Wire Wire Line
+	5050 1050 5150 1050
+Wire Wire Line
+	5150 1050 5150 1150
+Wire Wire Line
+	19700 5000 20450 5000
+Wire Wire Line
+	18500 5000 19200 5000
+Wire Wire Line
+	19450 4150 19450 4850
+$Comp
+L POT VR1
+U 1 1 558296D7
+P 19450 5000
+F 0 "VR1" H 19450 4900 50  0000 C CNN
+F 1 "POT" H 19450 5000 50  0000 C CNN
+F 2 "~" H 19450 5000 60  0000 C CNN
+F 3 "~" H 19450 5000 60  0000 C CNN
+	1    19450 5000
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	19100 4750 19100 5150
+Wire Notes Line
+	19100 5150 19750 5150
+Wire Notes Line
+	19750 5150 19750 4750
+Wire Notes Line
+	19750 4750 19100 4750
+Text Notes 18950 5250 0    60   ~ 0
+Hooked up correctly?
+Wire Notes Line
+	1300 11300 1850 11300
 $EndSCHEMATC

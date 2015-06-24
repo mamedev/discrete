@@ -37,7 +37,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 1 1
 Title "Monkey Magic Sound Board"
-Date "18 jun 2015"
+Date "24 jun 2015"
 Rev ""
 Comp "Nintendo"
 Comment1 "Hand-traced"
@@ -987,7 +987,7 @@ L POT VR1
 U 1 1 558296D7
 P 19450 5000
 F 0 "VR1" H 19450 4900 50  0000 C CNN
-F 1 "POT" H 19450 5000 50  0000 C CNN
+F 1 "50k" H 19450 5000 50  0000 C CNN
 F 2 "~" H 19450 5000 60  0000 C CNN
 F 3 "~" H 19450 5000 60  0000 C CNN
 	1    19450 5000
@@ -1812,4 +1812,8 @@ F 3 "" H 20450 4650 60  0000 C CNN
 	1    20450 4650
 	1    0    0    1   
 $EndComp
+Text Notes 10700 7100 0    60   ~ 0
+Sounds "less dynamic" when connected (!)
+Text Notes 18700 4750 0    60   ~ 0
+Simply controls volume.  Range unknown.  Set to 50k.
 $EndSCHEMATC

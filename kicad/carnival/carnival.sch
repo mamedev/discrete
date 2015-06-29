@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:MAME
-LIBS:circus-cache
+LIBS:carnival-cache
 EELAYER 27 0
 EELAYER END
 $Descr A0 46811 33110

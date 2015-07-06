@@ -1,0 +1,215 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MAME
+LIBS:wildfire-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "6 jul 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X01 I_A12
+U 1 1 559A566A
+P 6500 1800
+F 0 "I_A12" H 6500 1900 50  0000 C CNN
+F 1 "0" V 6600 1800 50  0000 C CNN
+F 2 "" H 6500 1800 60  0000 C CNN
+F 3 "" H 6500 1800 60  0000 C CNN
+	1    6500 1800
+	0    1    -1   0   
+$EndComp
+$Comp
+L CONN_01X01 I_F
+U 1 1 559A5699
+P 4200 1800
+F 0 "I_F" H 4200 1900 50  0000 C CNN
+F 1 "0" V 4300 1800 50  0000 C CNN
+F 2 "" H 4200 1800 60  0000 C CNN
+F 3 "" H 4200 1800 60  0000 C CNN
+	1    4200 1800
+	0    1    -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 559A56CA
+P 6500 3300
+F 0 "R2" V 6580 3300 40  0000 C CNN
+F 1 "10k" V 6507 3301 40  0000 C CNN
+F 2 "~" V 6430 3300 30  0000 C CNN
+F 3 "~" H 6500 3300 30  0000 C CNN
+	1    6500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 559A56D9
+P 7350 2550
+F 0 "C1" H 7350 2650 40  0000 L CNN
+F 1 "4.7u" H 7356 2465 40  0000 L CNN
+F 2 "~" H 7388 2400 30  0000 C CNN
+F 3 "~" H 7350 2550 60  0000 C CNN
+	1    7350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR
+U 1 1 559A5701
+P 8650 5150
+F 0 "#PWR" H 8650 5250 30  0001 C CNN
+F 1 "VDD" H 8650 5260 30  0000 C CNN
+F 2 "" H 8650 5150 60  0000 C CNN
+F 3 "" H 8650 5150 60  0000 C CNN
+	1    8650 5150
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 559A5710
+P 3200 2750
+F 0 "#PWR?" H 3200 2750 30  0001 C CNN
+F 1 "GND" H 3200 2680 30  0001 C CNN
+F 2 "" H 3200 2750 60  0000 C CNN
+F 3 "" H 3200 2750 60  0000 C CNN
+	1    3200 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2SB631 Q3
+U 1 1 559A6850
+P 4200 2500
+F 0 "Q3" H 4200 2350 40  0000 R CNN
+F 1 "~" H 4200 2650 40  0000 R CNN
+F 2 "TO126" H 4080 2600 29  0001 C CNN
+F 3 "" H 4200 2500 60  0000 C CNN
+	1    4200 2500
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4200 2000 4200 2300
+Wire Wire Line
+	4000 2600 3200 2600
+Wire Wire Line
+	3200 2600 3200 2750
+Wire Wire Line
+	4400 2600 4850 2600
+Wire Wire Line
+	4850 2600 4850 3300
+Wire Wire Line
+	4850 3300 2950 3300
+Wire Wire Line
+	2950 3300 2950 4300
+Wire Wire Line
+	2950 4300 4600 4300
+Wire Wire Line
+	4600 4300 4600 4700
+Wire Wire Line
+	4600 4700 5650 4700
+Wire Wire Line
+	5650 4700 6300 4700
+$Comp
+L 2SB631 Q2
+U 1 1 559A6875
+P 6500 4600
+F 0 "Q2" H 6500 4450 40  0000 R CNN
+F 1 "~" H 6500 4750 40  0000 R CNN
+F 2 "TO126" H 6380 4700 29  0001 C CNN
+F 3 "" H 6500 4600 60  0000 C CNN
+	1    6500 4600
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6500 4400 6500 3750
+Wire Wire Line
+	6500 3750 6500 3550
+Wire Wire Line
+	6700 4700 7000 4700
+Wire Wire Line
+	7000 4700 7350 4700
+Wire Wire Line
+	7350 4700 8650 4700
+Wire Wire Line
+	8650 4700 8650 5150
+Wire Wire Line
+	6500 2000 6500 2150
+Wire Wire Line
+	6500 2150 6500 3050
+Wire Wire Line
+	6500 2150 7350 2150
+Wire Wire Line
+	7350 2150 7350 2350
+Connection ~ 6500 2150
+Wire Wire Line
+	7350 2750 7350 4700
+Connection ~ 7350 4700
+$Comp
+L R R1
+U 1 1 559A68E0
+P 7000 4150
+F 0 "R1" V 7080 4150 40  0000 C CNN
+F 1 "10k" V 7007 4151 40  0000 C CNN
+F 2 "~" V 6930 4150 30  0000 C CNN
+F 3 "~" H 7000 4150 30  0000 C CNN
+	1    7000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3750 7000 3750
+Wire Wire Line
+	7000 3750 7000 3900
+Connection ~ 6500 3750
+Wire Wire Line
+	7000 4400 7000 4700
+Connection ~ 7000 4700
+$Comp
+L CONN_01X01 O_AUDIO
+U 1 1 559A6915
+P 5650 5050
+F 0 "O_AUDIO" H 5650 5150 50  0000 C CNN
+F 1 "0" V 5750 5050 50  0000 C CNN
+F 2 "" H 5650 5050 60  0000 C CNN
+F 3 "" H 5650 5050 60  0000 C CNN
+	1    5650 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 4850 5650 4700
+Connection ~ 5650 4700
+$EndSCHEMATC

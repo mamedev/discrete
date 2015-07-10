@@ -134,39 +134,28 @@ F 3 "" H 8250 1100 60  0000 C CNN
 	1    8250 1100
 	-1   0    0    1   
 $EndComp
-$Comp
-L R R23
-U 1 1 559FE735
-P 5900 850
-F 0 "R23" H 6050 850 50  0000 C CNN
-F 1 "2.5K" V 5900 850 50  0000 C CNN
-F 2 "" V 5830 850 30  0000 C CNN
-F 3 "" H 5900 850 30  0000 C CNN
-	1    5900 850 
-	-1   0    0    1   
-$EndComp
 Text GLabel 5600 650  0    60   Input ~ 0
 NOISE_LEVEL
 $Comp
 L R R22
 U 1 1 559FE7FA
-P 6250 600
-F 0 "R22" V 6330 600 50  0000 C CNN
-F 1 "0.47K" V 6250 600 50  0000 C CNN
-F 2 "" V 6180 600 30  0000 C CNN
-F 3 "" H 6250 600 30  0000 C CNN
-	1    6250 600 
+P 6250 500
+F 0 "R22" V 6330 500 50  0000 C CNN
+F 1 "0.47K" V 6250 500 50  0000 C CNN
+F 2 "" V 6180 500 30  0000 C CNN
+F 3 "" H 6250 500 30  0000 C CNN
+	1    6250 500 
 	0    1    1    0   
 $EndComp
 $Comp
 L +12V #PWR?
 U 1 1 559FE894
-P 6600 600
-F 0 "#PWR?" H 6600 450 50  0001 C CNN
-F 1 "+12V" V 6700 650 50  0000 C CNN
-F 2 "" H 6600 600 60  0000 C CNN
-F 3 "" H 6600 600 60  0000 C CNN
-	1    6600 600 
+P 6600 500
+F 0 "#PWR?" H 6600 350 50  0001 C CNN
+F 1 "+12V" V 6700 550 50  0000 C CNN
+F 2 "" H 6600 500 60  0000 C CNN
+F 3 "" H 6600 500 60  0000 C CNN
+	1    6600 500 
 	0    1    1    0   
 $EndComp
 Text Notes 5100 900  0    30   ~ 0
@@ -180,7 +169,7 @@ F 1 "2N4124" H 6200 1500 50  0000 L CNN
 F 2 "TO-220" H 6200 1425 50  0000 L CIN
 F 3 "" H 6000 1500 50  0000 L CNN
 	1    6000 1500
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Earth #PWR?
@@ -520,15 +509,11 @@ Wire Wire Line
 Wire Wire Line
 	8250 1300 8250 1200
 Wire Wire Line
-	6400 600  6600 600 
+	6400 500  6600 500 
 Wire Wire Line
-	6100 600  5900 600 
+	6100 500  5900 500 
 Wire Wire Line
-	5900 600  5900 700 
-Wire Wire Line
-	5950 850  8250 850 
-Wire Wire Line
-	6050 750  6050 950 
+	6050 600  6050 950 
 Wire Wire Line
 	5900 1000 5900 1300
 Wire Wire Line
@@ -545,9 +530,9 @@ Wire Wire Line
 Connection ~ 5900 1100
 Wire Wire Line
 	5900 1100 6200 1100
-Connection ~ 6200 850 
+Connection ~ 6200 750 
 Wire Wire Line
-	6200 850  6200 1050
+	6200 750  6200 1050
 Wire Wire Line
 	6200 1050 4650 1050
 Wire Wire Line
@@ -602,7 +587,7 @@ Connection ~ 7100 3400
 Wire Wire Line
 	7100 3400 7650 3400
 Wire Wire Line
-	8250 850  8250 1000
+	8250 750  8250 1000
 Connection ~ 8250 1700
 Wire Wire Line
 	7950 1700 8450 1700
@@ -778,7 +763,7 @@ F 1 "2N4126" H 4850 4050 50  0000 L CNN
 F 2 "TO-126" H 4850 3975 50  0000 L CIN
 F 3 "" H 4650 4050 50  0000 L CNN
 	1    4650 4050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	4950 4400 4750 4400
@@ -938,4 +923,17 @@ Wire Wire Line
 	900  4750 1200 4750
 Text Notes 2450 4950 0    30   ~ 0
 What's this chip? 315 - 3F?\nOsso
+$Comp
+L POT R23
+U 1 1 559FC58B
+P 5900 750
+F 0 "R23" V 5800 600 50  0000 C CNN
+F 1 "2.5K" H 5900 750 50  0000 C CNN
+F 2 "" H 5900 750 60  0000 C CNN
+F 3 "" H 5900 750 60  0000 C CNN
+	1    5900 750 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6050 750  8250 750 
 $EndSCHEMATC

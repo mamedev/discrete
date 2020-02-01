@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ANALOG_INPUT
+D Netlist analog input
+K netlist
+$ENDCMP
+#
+$CMP TTL_INPUT
+D Netlist analog input
+K netlist
+$ENDCMP
+#
+#End Doc Library

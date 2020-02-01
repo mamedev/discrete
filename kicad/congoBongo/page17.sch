@@ -1,37 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:MAME
-LIBS:page17-cache
-EELAYER 27 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -46,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_01X01 U4_OUT
+L MAME:CONN_01X01 U4_OUT
 U 1 1 559A47AA
 P 6000 4250
 F 0 "U4_OUT" H 6000 4350 50  0000 C CNN
@@ -57,7 +25,7 @@ F 3 "" H 6000 4250 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X01 U5_OUT
+L MAME:CONN_01X01 U5_OUT
 U 1 1 559A47BC
 P 3550 4250
 F 0 "U5_OUT" H 3550 4350 50  0000 C CNN
@@ -68,7 +36,7 @@ F 3 "" H 3550 4250 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X01 U4_IN
+L MAME:CONN_01X01 U4_IN
 U 1 1 559A47C2
 P 5050 4250
 F 0 "U4_IN" H 5050 4350 50  0000 C CNN
@@ -79,7 +47,7 @@ F 3 "" H 5050 4250 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LM324 U12
+L Amplifier_Operational:LM324 U12
 U 3 1 559A4A77
 P 9900 5800
 F 0 "U12" H 9950 6000 60  0000 C CNN
@@ -90,7 +58,7 @@ F 3 "" H 9900 5800 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L +6V #PWR?
+L power:+6V #PWR?
 U 1 1 559A4A86
 P 9250 6350
 F 0 "#PWR?" H 9250 6480 20  0001 C CNN
@@ -101,7 +69,7 @@ F 3 "" H 9250 6350 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L +6V #PWR?
+L power:+6V #PWR?
 U 1 1 559A4A98
 P 12250 6300
 F 0 "#PWR?" H 12250 6430 20  0001 C CNN
@@ -112,7 +80,7 @@ F 3 "" H 12250 6300 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L R R14
+L Device:R R14
 U 1 1 559A4AA0
 P 3000 6550
 F 0 "R14" V 3080 6550 40  0000 C CNN
@@ -123,7 +91,7 @@ F 3 "~" H 3000 6550 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C12
+L Device:C C12
 U 1 1 559A4AB4
 P 2300 6550
 F 0 "C12" H 2300 6650 40  0000 L CNN
@@ -134,7 +102,7 @@ F 3 "~" H 2300 6550 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 559A4AC8
 P 1700 6750
 F 0 "#PWR?" H 1700 6750 30  0001 C CNN
@@ -149,15 +117,9 @@ Wire Wire Line
 Wire Wire Line
 	3550 6550 3550 7550
 Wire Wire Line
-	3550 6550 3250 6550
-Wire Wire Line
-	2750 6550 2500 6550
-Wire Wire Line
-	2100 6550 1700 6550
-Wire Wire Line
 	1700 6550 1700 6750
 $Comp
-L R R17
+L Device:R R17
 U 1 1 559A4ADD
 P 8400 6650
 F 0 "R17" V 8480 6650 40  0000 C CNN
@@ -168,7 +130,7 @@ F 3 "~" H 8400 6650 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C15
+L Device:C C15
 U 1 1 559A4AE3
 P 7700 6650
 F 0 "C15" H 7700 6750 40  0000 L CNN
@@ -179,7 +141,7 @@ F 3 "~" H 7700 6650 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R16
+L Device:R R16
 U 1 1 559A4AEA
 P 8400 6250
 F 0 "R16" V 8480 6250 40  0000 C CNN
@@ -190,7 +152,7 @@ F 3 "~" H 8400 6250 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C14
+L Device:C C14
 U 1 1 559A4AF0
 P 7700 6250
 F 0 "C14" H 7700 6350 40  0000 L CNN
@@ -201,7 +163,7 @@ F 3 "~" H 7700 6250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R13
+L Device:R R13
 U 1 1 559A4AF6
 P 4500 6250
 F 0 "R13" V 4580 6250 40  0000 C CNN
@@ -212,7 +174,7 @@ F 3 "~" H 4500 6250 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R15
+L Device:R R15
 U 1 1 559A4AFC
 P 5500 6850
 F 0 "R15" V 5580 6850 40  0000 C CNN
@@ -223,7 +185,7 @@ F 3 "~" H 5500 6850 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C13
+L Device:C C13
 U 1 1 559A4B02
 P 4800 6850
 F 0 "C13" H 4800 6950 40  0000 L CNN
@@ -234,7 +196,7 @@ F 3 "~" H 4800 6850 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 559A4B08
 P 4050 7150
 F 0 "#PWR?" H 4050 7150 30  0001 C CNN
@@ -247,57 +209,31 @@ $EndComp
 Wire Wire Line
 	5050 4450 5050 6250
 Wire Wire Line
-	5050 6250 4750 6250
-Wire Wire Line
 	4050 6250 4050 6850
 Wire Wire Line
 	4050 6850 4050 7150
-Wire Wire Line
-	4050 6250 4250 6250
-Wire Wire Line
-	4600 6850 4050 6850
 Connection ~ 4050 6850
-Wire Wire Line
-	5000 6850 5250 6850
-Wire Wire Line
-	6000 6850 5750 6850
 Wire Wire Line
 	6000 4450 6000 6250
 Wire Wire Line
 	6000 6250 6000 6850
-Wire Wire Line
-	7500 6250 6000 6250
 Connection ~ 6000 6250
 Wire Wire Line
 	3550 7550 6400 7550
 Wire Wire Line
 	6400 7550 6400 6650
-Wire Wire Line
-	6400 6650 7500 6650
 Connection ~ 3550 6550
-Wire Wire Line
-	7900 6650 8150 6650
-Wire Wire Line
-	7900 6250 8150 6250
-Wire Wire Line
-	9000 6650 8650 6650
 Wire Wire Line
 	9000 5100 9000 5700
 Wire Wire Line
 	9000 5700 9000 6250
 Wire Wire Line
 	9000 6250 9000 6650
-Wire Wire Line
-	9000 6250 8650 6250
-Wire Wire Line
-	9000 5700 9400 5700
 Connection ~ 9000 6250
-Wire Wire Line
-	9400 5900 9250 5900
 Wire Wire Line
 	9250 5900 9250 6350
 $Comp
-L R R18
+L Device:R R18
 U 1 1 559A4BEE
 P 9800 5100
 F 0 "R18" V 9880 5100 40  0000 C CNN
@@ -307,19 +243,11 @@ F 3 "~" H 9800 5100 30  0000 C CNN
 	1    9800 5100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9000 5100 9550 5100
 Connection ~ 9000 5700
 Wire Wire Line
-	10050 5100 10800 5100
-Wire Wire Line
 	10800 5100 10800 5800
-Wire Wire Line
-	10400 5800 10800 5800
-Wire Wire Line
-	10800 5800 11400 5800
 $Comp
-L R R19
+L Device:R R19
 U 1 1 559A4C3C
 P 11650 5800
 F 0 "R19" V 11730 5800 40  0000 C CNN
@@ -331,7 +259,7 @@ F 3 "~" H 11650 5800 30  0000 C CNN
 $EndComp
 Connection ~ 10800 5800
 $Comp
-L LM324 U12
+L Amplifier_Operational:LM324 U12
 U 4 1 559A4C6A
 P 12900 5900
 F 0 "U12" H 12950 6100 60  0000 C CNN
@@ -342,15 +270,9 @@ F 3 "" H 12900 5900 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	11900 5800 12250 5800
-Wire Wire Line
-	12250 5800 12400 5800
-Wire Wire Line
-	12400 6000 12250 6000
-Wire Wire Line
 	12250 6000 12250 6300
 $Comp
-L R R20
+L Device:R R20
 U 1 1 559A4CBF
 P 13000 5000
 F 0 "R20" V 13080 5000 40  0000 C CNN
@@ -361,16 +283,10 @@ F 3 "~" H 13000 5000 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	13400 5900 13750 5900
-Wire Wire Line
 	13750 5900 14400 5900
-Wire Wire Line
-	13250 5000 13750 5000
 Wire Wire Line
 	13750 5000 13750 5900
 Connection ~ 13750 5900
-Wire Wire Line
-	12750 5000 12250 5000
 Wire Wire Line
 	12250 4500 12250 5000
 Wire Wire Line
@@ -378,7 +294,7 @@ Wire Wire Line
 Connection ~ 12250 5800
 Connection ~ 12250 5000
 $Comp
-L CONN_01X01 O_SJ
+L MAME:CONN_01X01 O_SJ
 U 1 1 559A4DA5
 P 12250 4300
 F 0 "O_SJ" H 12250 4400 50  0000 C CNN
@@ -389,7 +305,7 @@ F 3 "" H 12250 4300 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X01 O_SOU
+L MAME:CONN_01X01 O_SOU
 U 1 1 559A4DAB
 P 14600 5900
 F 0 "O_SOU" H 14600 6000 50  0000 C CNN
@@ -433,4 +349,56 @@ Text Notes 2800 2500 0    60   ~ 0
 U5
 Text Notes 5450 2550 0    60   ~ 0
 U4
+Wire Wire Line
+	1700 6550 2150 6550
+Wire Wire Line
+	2450 6550 2850 6550
+Wire Wire Line
+	3150 6550 3550 6550
+Wire Wire Line
+	4050 6250 4350 6250
+Wire Wire Line
+	4650 6250 5050 6250
+Wire Wire Line
+	4050 6850 4650 6850
+Wire Wire Line
+	4950 6850 5350 6850
+Wire Wire Line
+	5650 6850 6000 6850
+Wire Wire Line
+	6000 6250 7550 6250
+Wire Wire Line
+	7850 6250 8250 6250
+Wire Wire Line
+	8550 6250 9000 6250
+Wire Wire Line
+	8550 6650 9000 6650
+Wire Wire Line
+	9000 5100 9650 5100
+Wire Wire Line
+	9950 5100 10800 5100
+Wire Wire Line
+	9000 5700 9600 5700
+Wire Wire Line
+	9250 5900 9600 5900
+Wire Wire Line
+	10200 5800 10800 5800
+Wire Wire Line
+	10800 5800 11500 5800
+Wire Wire Line
+	11800 5800 12250 5800
+Wire Wire Line
+	12250 5800 12600 5800
+Wire Wire Line
+	12250 6000 12600 6000
+Wire Wire Line
+	13200 5900 13750 5900
+Wire Wire Line
+	13150 5000 13750 5000
+Wire Wire Line
+	12250 5000 12850 5000
+Wire Wire Line
+	6400 6650 7550 6650
+Wire Wire Line
+	7850 6650 8250 6650
 $EndSCHEMATC

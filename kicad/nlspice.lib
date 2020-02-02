@@ -1,0 +1,6 @@
+*
+*
+*
+.subckt ANALOG_INPUT 1 PARAMS: PV=1
+    V1  1 0 DC {PV}
+.ends

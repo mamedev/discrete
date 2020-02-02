@@ -26,7 +26,11 @@ Preferences-> Manage Symbol Libraries -> Add existing library
 
 #### SPICE library
 
-You need to copy `nlspice.lib` to every KiCad project folder. This is a requirement imposed by KiCad. nlspice.lib contains SPICE models for the ANALOG_INPUT and TTL_INPUT devices. Schematics using these devices can be calculated using ngspice through the KiCad GUI. 
+nlspice.lib contains SPICE models for the ANALOG_INPUT and TTL_INPUT devices. 
+Schematics using these devices can be calculated using ngspice through the KiCad GUI. 
+
+You need to copy `nlspice.lib` to the KiCad project folder if you want to use ngspice from within KiCad.
+This is a requirement imposed by KiCad. 
 
 ### Status
 

@@ -95,8 +95,11 @@ TTL_INPUT devices have 3 pins. Pin 1 is the logic output, pin 2 positive power s
 
 ### Converting to netlist
 
-```sh ./nltool -c convert -f /tmp/congoBongo.cir > nl_congo_bongo.cpp```
+Convert an exported spice file (suffix cir) to netlist format using:
 
+```sh 
+/nltool -c convert -f /tmp/congoBongo.cir > nl_congo_bongo.cpp
+```
 
 
 

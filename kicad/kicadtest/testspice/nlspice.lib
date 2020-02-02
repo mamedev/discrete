@@ -1,0 +1,18 @@
+*
+*
+*
+.subckt ANALOG_INPUT 1 PARAMS: V=1
+    V1  1 0 DC {V}
+.ends
+
+*
+* 1: Output
+* 2: VCC
+* 3: GND
+*
+.subckt TTL_INPUT 1 2 3 PARAMS: L=1
+    R1  1 3 R='((1-L)*10 + L*1e9)'
+    R2  10 2 R='((1-L)*1e9 + L*170)'
+    D2  10 1  DX
+    .model DX D
+.ends

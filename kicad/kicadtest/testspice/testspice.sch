@@ -1,0 +1,268 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NPN_CBE Q1
+U 1 1 5E5B92C4
+P 3050 2850
+F 0 "Q1" H 3241 2896 50  0000 L CNN
+F 1 "NPN" H 3241 2805 50  0000 L CNN
+F 2 "" H 3250 2950 50  0001 C CNN
+F 3 "~" H 3050 2850 50  0001 C CNN
+F 4 "Q" H 3050 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "NPN" H 3050 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3050 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 3" H 3050 2850 50  0001 C CNN "Spice_Node_Sequence"
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_CEB Q2
+U 1 1 5E5B98A2
+P 4600 2850
+F 0 "Q2" H 4791 2896 50  0000 L CNN
+F 1 "NPN" H 4791 2805 50  0000 L CNN
+F 2 "" H 4800 2950 50  0001 C CNN
+F 3 "~" H 4600 2850 50  0001 C CNN
+F 4 "Q" H 4600 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "NPN" H 4600 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4600 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 3 2" H 4950 2700 50  0000 C CNN "Spice_Node_Sequence"
+	1    4600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E5B9E47
+P 3700 3600
+F 0 "#PWR01" H 3700 3350 50  0001 C CNN
+F 1 "GND" H 3705 3427 50  0000 C CNN
+F 2 "" H 3700 3600 50  0001 C CNN
+F 3 "" H 3700 3600 50  0001 C CNN
+	1    3700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E5BA17D
+P 3600 3600
+F 0 "#FLG01" H 3600 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 3600 3773 50  0000 C CNN
+F 2 "" H 3600 3600 50  0001 C CNN
+F 3 "~" H 3600 3600 50  0001 C CNN
+	1    3600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E5BB323
+P 3150 2400
+F 0 "R2" H 3220 2446 50  0000 L CNN
+F 1 "1k" H 3220 2355 50  0000 L CNN
+F 2 "" V 3080 2400 50  0001 C CNN
+F 3 "~" H 3150 2400 50  0001 C CNN
+	1    3150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E5BB4AF
+P 4700 2400
+F 0 "R4" H 4770 2446 50  0000 L CNN
+F 1 "1k" H 4770 2355 50  0000 L CNN
+F 2 "" V 4630 2400 50  0001 C CNN
+F 3 "~" H 4700 2400 50  0001 C CNN
+	1    4700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5E5BC192
+P 2050 3150
+F 0 "V2" H 2278 3196 50  0000 L CNN
+F 1 ".8" H 2278 3105 50  0000 L CNN
+F 2 "" H 2050 3150 50  0001 C CNN
+F 3 "~" H 2050 3150 50  0001 C CNN
+	1    2050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E5BC4C2
+P 2550 2850
+F 0 "R1" V 2343 2850 50  0000 C CNN
+F 1 "1k" V 2434 2850 50  0000 C CNN
+F 2 "" V 2480 2850 50  0001 C CNN
+F 3 "~" H 2550 2850 50  0001 C CNN
+	1    2550 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E5BC9E4
+P 4150 2850
+F 0 "R3" V 3943 2850 50  0000 C CNN
+F 1 "1k" V 4034 2850 50  0000 C CNN
+F 2 "" V 4080 2850 50  0001 C CNN
+F 3 "~" H 4150 2850 50  0001 C CNN
+	1    4150 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5E5BD016
+P 1100 3150
+F 0 "V1" H 1328 3196 50  0000 L CNN
+F 1 "5" H 1328 3105 50  0000 L CNN
+F 2 "" H 1100 3150 50  0001 C CNN
+F 3 "~" H 1100 3150 50  0001 C CNN
+	1    1100 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3050 4700 3600
+Wire Wire Line
+	4700 3600 3700 3600
+Wire Wire Line
+	3700 3600 3600 3600
+Connection ~ 3700 3600
+Wire Wire Line
+	1100 3600 1100 3450
+Connection ~ 3600 3600
+Wire Wire Line
+	2050 3450 2050 3600
+Wire Wire Line
+	1100 3600 2050 3600
+Connection ~ 2050 3600
+Wire Wire Line
+	2050 3600 3150 3600
+Wire Wire Line
+	3850 2850 4000 2850
+Wire Wire Line
+	3150 3050 3150 3600
+Connection ~ 3150 3600
+Wire Wire Line
+	3150 3600 3600 3600
+Wire Wire Line
+	2700 2850 2850 2850
+Wire Wire Line
+	3150 2650 3150 2550
+Wire Wire Line
+	4300 2850 4400 2850
+Wire Wire Line
+	4700 2550 4700 2650
+Wire Wire Line
+	4700 2250 4700 2050
+Wire Wire Line
+	4700 2050 3150 2050
+Wire Wire Line
+	1100 2050 1100 2850
+Wire Wire Line
+	3150 2250 3150 2050
+Connection ~ 3150 2050
+Wire Wire Line
+	3150 2050 1100 2050
+Text Notes 1100 1550 0    50   ~ 0
+* STANDARD SPICE3 definition\n.model npn npn\n.model pnp pnp\n.model nmos nmos\n.model pmos pmos\n*.model zv0_8 zv0_8\n\n.tran 20e-6 10
+Wire Wire Line
+	2050 2850 2400 2850
+$Comp
+L netlist:ANALOG_INPUT X1
+U 1 1 5E36DEDC
+P 3650 2850
+F 0 "X1" H 3733 3115 50  0000 C CNN
+F 1 "ANALOG_INPUT V=0.8" H 3733 3024 50  0000 C CNN
+F 2 "" H 3650 2850 50  0001 C CNN
+F 3 "" H 3650 2850 50  0001 C CNN
+F 4 "nlspice.lib" H 3400 2700 50  0001 R CNN "Spice_Lib_File"
+	1    3650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_CEB Q3
+U 1 1 5E36FC82
+P 6750 2850
+F 0 "Q3" H 6941 2896 50  0000 L CNN
+F 1 "NPN" H 6941 2805 50  0000 L CNN
+F 2 "" H 6950 2950 50  0001 C CNN
+F 3 "~" H 6750 2850 50  0001 C CNN
+F 4 "Q" H 6750 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "NPN" H 6750 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6750 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 3 2" H 7100 2700 50  0000 C CNN "Spice_Node_Sequence"
+	1    6750 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5E36FC8C
+P 6850 2400
+F 0 "R6" H 6920 2446 50  0000 L CNN
+F 1 "1k" H 6920 2355 50  0000 L CNN
+F 2 "" V 6780 2400 50  0001 C CNN
+F 3 "~" H 6850 2400 50  0001 C CNN
+	1    6850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E36FC96
+P 6300 2850
+F 0 "R5" V 6093 2850 50  0000 C CNN
+F 1 "1k" V 6184 2850 50  0000 C CNN
+F 2 "" V 6230 2850 50  0001 C CNN
+F 3 "~" H 6300 2850 50  0001 C CNN
+	1    6300 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3050 6850 3600
+Wire Wire Line
+	6000 2850 6150 2850
+Wire Wire Line
+	6450 2850 6550 2850
+Wire Wire Line
+	6850 2550 6850 2650
+Wire Wire Line
+	6850 2250 6850 2050
+$Comp
+L netlist:TTL_INPUT X2
+U 1 1 5E371AE7
+P 5750 2850
+F 0 "X2" H 5572 2896 50  0000 R CNN
+F 1 "TTL_INPUT L=0" H 5572 2805 50  0000 R CNN
+F 2 "" H 5750 2850 50  0001 C CNN
+F 3 "" H 5750 2850 50  0001 C CNN
+F 4 "nlspice.lib" H 5550 2700 50  0001 R CNN "Spice_Lib_File"
+	1    5750 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2050 5750 2050
+Connection ~ 4700 2050
+Wire Wire Line
+	4700 3600 5750 3600
+Connection ~ 4700 3600
+Wire Wire Line
+	5750 2500 5750 2050
+Connection ~ 5750 2050
+Wire Wire Line
+	5750 2050 6850 2050
+Wire Wire Line
+	5750 3200 5750 3600
+Connection ~ 5750 3600
+Wire Wire Line
+	5750 3600 6850 3600
+$EndSCHEMATC

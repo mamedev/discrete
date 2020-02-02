@@ -1,7 +1,7 @@
 # discrete
 Development files for the simulation of discrete circuits in MAME.
 
-The MAME emulation platform is capable of importing SPICE netlists which can be exported from the open source suite [KiCAD](http://kicad-pcb.org/) and the open source suite [gEDA](http://wiki.geda-project.org/). You may also be successful with [LTspice ](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
+The MAME emulation platform is capable of importing SPICE netlists which can be exported from the open source suite [KiCad](http://kicad-pcb.org/) and the open source suite [gEDA](http://wiki.geda-project.org/). You may also be successful with [LTspice ](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
 
 This repository is meant to house files in formats that can be imported and worked with in netlist.
 
@@ -10,7 +10,7 @@ This repository is meant to house files in formats that can be imported and work
 ### Prerequisites
 
 #### Install
-Going forward you will need at least KiCad 5.1. On Ubuntu you can install kicad using 
+Going forward you will need at least KiCad 5.1. On Ubuntu you can install KiCad using 
 
 ```sh
 sudo add-apt-repository ppa:js-reynaud/kicad-5.1
@@ -23,6 +23,10 @@ sudo apt install kicad kicad-templates kicad-doc-en kicad-symbols kicad-footprin
 Add `MAME.kib` and `netlist.lib` to your library list:
 
 Preferences-> Manage Symbol Libraries -> Add existing library
+
+#### SPICE library
+
+You need to copy `nlspice.lib` to every KiCad project folder. This is a requirement imposed by KiCad. nlspice.lib contains SPICE models for the ANALOG_INPUT and TTL_INPUT devices. Schematics using these devices can be calculated using ngspice through the KiCad GUI. 
 
 ### Status
 
@@ -48,9 +52,9 @@ Spice and the nltool convert command expect diodes to be in the format
 D1 Anode Cathode Model
 ```
 
-Kicad however by default just maps pin 1 to Anode and pin 2 to Cathode. Unfortunately in Kicad pin 1 for diodes ins Cathode and pin 2 is Anode.
+KiCad however by default just maps pin 1 to Anode and pin 2 to Cathode. Unfortunately in KiCad pin 1 for diodes ins Cathode and pin 2 is Anode.
 
-`nltool -c convert` will currently automatically determine if a netlist is fed into it and take appropriate action. This will change in the future to have perfect integration with other netlist parsers.
+`nltool -c convert` will currently automatically determine if a KiCad netlist is fed into it and take appropriate action. This will change in the future to have perfect integration with other netlist parsers.
 
 #### BJT Transistors
 
@@ -81,15 +85,17 @@ C pin | B pin | E pin | Suffix | Spice_Node_Sequence |
 
 #### General devices
 
-Kicad comes with libraries for 74XX devices, 4XXX devices and opamps . If there are multiple components per package, all unused inputs must be connected to `GND` and all unneeded outputs must be marked as `NC`. For all packaged (DIP, ...) devices there is usually a separate component for power supply connection. Power supplies must be connect.
+KiCad comes with libraries for 74XX devices, 4XXX devices and opamps . If there are multiple components per package, all unused inputs must be connected to `GND` and all unneeded outputs must be marked as `NC`. For all packaged (DIP, ...) devices there is usually a separate component for power supply connection. Power supplies must be connected.
 
 #### ANALOG_INPUT device
 
-Special device for providing fixed voltage nets in netlist, e.g. +5V or +12V. This devices is provided by netlist.lib. Set value field to voltage. Don't change the reference prefix. ```netlist``` won't work without ```YA_```
+Special device for providing fixed voltage nets in netlist, e.g. +5V or +12V. This device is provided by netlist.lib. Set value field to read `ANALOG_INPUT V=voltage`, e.g `ANALOG_INPUT V=3.3`. Don't change the reference prefix. `netlist` conversion won't work without `X`.
+
+ANALOG_INPUT devices have one pin. This is a power output and thus doesn't need a `PWR_FLAG` connected to it.
 
 #### TTL_INPUT device
 
-This device emulates logic inputs to the circuit with TTL level. This devices is provided by netlist.lib. Set value field to 1 (logic high) or 0 (logic low). Don't change the reference prefix. ```netlist``` won't work without ```YT_```.
+This device emulates logic inputs to the circuit with TTL level. This devices is provided by netlist.lib. Set value field to read `TTL_INPUT L=1` for high level and `TTL_INPUT L=0` for low level. Don't change the reference prefix. `netlist` conversion won't work without `X`.
 
 TTL_INPUT devices have 3 pins. Pin 1 is the logic output, pin 2 positive power supply (VCC) and pin 3 negative power supply (GND).
 
@@ -98,7 +104,7 @@ TTL_INPUT devices have 3 pins. Pin 1 is the logic output, pin 2 positive power s
 Convert an exported spice file (suffix cir) to netlist format using:
 
 ```sh 
-/nltool -c convert -f /tmp/congoBongo.cir > nl_congo_bongo.cpp
+nltool -c convert -f congoBongo.cir > nl_congo_bongo.cpp
 ```
 
 

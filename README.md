@@ -1,7 +1,7 @@
 # discrete
 Development files for the simulation of discrete circuits in MAME.
 
-The MAME emulation platform is capable of importing SPICE netlists which can be exported from the open source suite [KiCad](http://kicad-pcb.org/) and the open source suite [gEDA](http://wiki.geda-project.org/). You may also be successful with [LTspice ](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
+The MAME emulation platform is capable of importing SPICE netlists which can be exported from the open source suite [KiCad](http://kicad.org/) and the open source suite [gEDA](http://wiki.geda-project.org/). You may also be successful with [LTspice ](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).
 
 This repository is meant to house files in formats that can be imported and worked with in netlist.
 
